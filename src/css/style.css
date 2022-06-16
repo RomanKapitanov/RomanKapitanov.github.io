@@ -477,7 +477,7 @@ button {
         margin-bottom: 15px;
         line-height: 50px;
         color: white;
-        margin-top: 130px;
+        margin-top: 115px;
     }
 
     .TitleWord span {
@@ -518,7 +518,7 @@ button {
     display: flex;
 
     width: 100%;
-
+height: 100vh;
     opacity: 0;
     -webkit-animation: cometitle 1.5s ease forwards;
     -o-animation: cometitle 1.5s ease forwards;
@@ -623,6 +623,12 @@ body {
     height: 522px;
 
 }
+@media(max-width:992px){
+    .i_can {
+    background: url(../img/What_i_can.jpg) 100%/1100px 100% no-repeat;
+    height: 522px;
+    
+    }}
 
 .i_can h2 {
     font-size: 25px;
@@ -636,7 +642,7 @@ body {
 }
 
 .All_Info .Lorem {
-    max-width: 220px;
+    max-width: 200px;
     text-align: center;
     line-height: 19px;
     font-family: Arial, sans-serif;
@@ -644,11 +650,15 @@ body {
 
 }
 
-@media(max-width:767px) {
+@media(max-width:767px) and (min-width:499px) {
     .All_Info b {
         font-size: 14px;
+    }}
+    @media(max-width:498px) {
+    .All_Info b {
+        font-size: 12px;
     }
-
+}
     .All_Info .Lorem {
         line-height: 15px;
         font-size: 11px;
@@ -700,12 +710,13 @@ body {
     -ms-transform: scale(1.0);
 }
 
-.fon_case {}
+
 
 .Case {
     height: 1216px;
 
 }
+
 
 .allin {
     max-width: 86%;
@@ -736,17 +747,19 @@ body {
 
 @media(max-width:768px) {
     .fyo {
-        background: url(../img/case.jpg) 50% 10%/100% 100% no-repeat;
+        background: url(../img/case.jpg) 50% 10%/900px 100% no-repeat;
     }
-
+}
     @media(max-width:570px) {
 
         .fyo {
-            background: url(../img/1618525065_21-phonoteka_org-p-fon-sploshnoi-tsvet-22.jpg) 50% 10%/100% 100% no-repeat;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                   background: url(../img/case.jpg) 50% 10%/700px 100% no-repeat;
+
+            
+             
         }
+
       
-    }
 
 }
 
@@ -761,7 +774,7 @@ summary p {
     color: #2f4154;
 }
 
-details > p {
+.oop k {
     font-size: 13px;
     width: 150px;
     color: #2f4154;
@@ -834,15 +847,24 @@ summary l {
 
 .box {
     height: 105%;
-    width: 75%;
-
-
-
+    width: 80%;
+padding-bottom: 3%;
+left: 10%;
+position: relative;
+margin-top: 20px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
 }
+@media(max-width:1096px){
+    
+    .box{
+        width: 100%;
+        position: static;
+    }
+}
+
 
 .Cost_calc {
     font-size: 35px;
@@ -979,9 +1001,18 @@ select:focus {
     height: 500px;
     width: 100%;
     margin-bottom: 106px;
-    background-attachment: fixed;
+    background-attachment:local;
 }
-
+@media(min-width:1024px){
+    .fon{
+      background-attachment:fixed;}
+}
+@media(max-width:991px){
+    .fon {
+    background: url(../img/lowstatic.jpg)50% 100%/1000px 100% no-repeat;
+}
+    
+}
 .lows {
     font-size: 30px;
     color: #293b4f;
@@ -990,6 +1021,7 @@ select:focus {
     text-align: center;
 
 }
+
 
 @media (max-width:991px) {
     .smail {
@@ -1088,7 +1120,6 @@ select:focus {
     text-align: center;
     font-family: Arial, sans-serif;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-    font-weight: 520;
     line-height: 17px;
 }
 
@@ -1332,7 +1363,7 @@ select:focus {
 
 @media(max-width:1360px) {
     .karta {
-        background: url(../img/karta.jpg) 0% 0%/100% 100% no-repeat;
+        background: url(../img/karta.jpg) 50% 0%/1500px 100% no-repeat;
 
     }
 }
@@ -1344,10 +1375,10 @@ select:focus {
     transition: transform, all 0.75s;
     -webkit-transition: all 0.75s;
     height: 40px;
-    width: 90px;
+    width: 95px;
     -o-transition: all 0.75s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+padding:7px;
 }
 
 .karta [ value="I'M HERE"] {
