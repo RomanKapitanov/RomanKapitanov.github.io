@@ -446,7 +446,7 @@ button {
 
 @media(max-width:992px) {
     .title {
-        background: url(../img/boy.png) 70% 100%/75% 80% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 70% 100%/75% 90% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 
     .TitleWord span {
@@ -495,7 +495,7 @@ button {
 
 @media(max-width:843px) {
     .title {
-        background: url(../img/boy.png) 60% 100%/90% 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 60% 100%/90% 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 
 
@@ -503,7 +503,7 @@ button {
 
 @media(max-width: 893px) {
     .title {
-        background: url(../img/boy.png) 60% 100%/93% 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 60% 100%/93% 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 
     .TitleWord {
@@ -514,7 +514,7 @@ button {
 
 @media(max-width: 800px) {
     .title {
-        background: url(../img/boy.png) 60% 100%/100% 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 60% 100%/100% 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 
     .TitleWord h1 {
@@ -530,7 +530,7 @@ button {
 
 @media(max-width: 691px) {
     .title {
-        background: url(../img/boy.png) 60% 100%/720px 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 60% 100%/720px 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 }
 
@@ -547,7 +547,7 @@ button {
 
 @media(max-width: 397px) {
     .title {
-        background: url(../img/boy.png) 50% 100%/720px 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
+        background: url(../img/boy.png) 50% 100%/720px 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
 
     .TitleWord h1 {
