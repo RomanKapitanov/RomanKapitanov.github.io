@@ -919,12 +919,10 @@ select:focus {
 .karta input {
     margin-top: 160px;
     margin-left: -10px;
-    background: #fff;
-    transition: transform, all 0.75s;
-    -webkit-transition: all 0.75s;
+
+
     height: 40px;
     width: 95px;
-    -o-transition: all 0.75s;
     padding: 7px;
 }
 

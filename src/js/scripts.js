@@ -85,4 +85,4 @@ let takeThreePrice = takeResultCreat(collectionWeb);
 
 let result = takeOnePrice + takeTwoPrice + takeThreePrice;
 
-alert("Цена сайта вам обойдется в: " + result + "руб");
+alert("Цена сайта обойдется вам в: " + result + "руб");
