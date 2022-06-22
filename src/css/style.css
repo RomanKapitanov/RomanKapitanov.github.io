@@ -6,27 +6,18 @@
     font-style: normal;
 }
 
-
-html,
 body {
-    height: 100%;
-        overflow-x: hidden;
-
+    overflow-x: hidden;
+    font-family: Frank, sans-serif;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    animation: bodyflow 4.5s;
+    -webkit-animation: bodyflow 4.5s;
+    -o-animation: bodyflow 4.5s;
 }
 
 body::after {
     background-size: cover;
-}
-
-body {
-    font-family: Frank, sans-serif;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: none;
-
-
-    -webkit-animation: bodyflow 4.5s;
-    -o-animation: bodyflow 4.5s;
-    animation: bodyflow 4.5s;
 }
 
 /*Loader*/
@@ -45,7 +36,8 @@ body {
     display: flex;
     align-items: center;
 }
-.Loader .rgf {
+
+.Loader .LoadingPoint {
     height: 20px;
     width: 20px;
     border: #000;
@@ -59,6 +51,7 @@ body {
     animation: lod 1s 4;
 
 }
+
 .Loader div:nth-child(1) {
     animation-delay: 0.1s;
 
@@ -70,25 +63,16 @@ body {
 
 .Loader div:nth-child(3) {
     animation-delay: 0.3s;
-
-}
-.fol {
-
-    display: flex;
-
 }
 
 /*Header*/
 
 .FirstNav {
-
     width: 100%;
     height: 60px;
     background: #344051;
     z-index: 2;
-
     position: fixed;
-
 }
 
 .name {
@@ -102,9 +86,6 @@ body {
     animation: logoani ease 0.4s forwards;
     animation-delay: 4.3s;
 }
-
-
-
 
 .li li {
     font-size: 17px;
@@ -122,7 +103,6 @@ body {
 .dropdown-menu li {
     font-family: Arial;
     font-size: 17px;
-
 }
 
 button {
@@ -134,7 +114,6 @@ button {
     animation: allme 0.4s ease forwards;
     animation-delay: 4.3s;
     opacity: 0;
-
 }
 
 .li li a {
@@ -142,8 +121,6 @@ button {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-
-
 }
 
 .li li:nth-child(2) {
@@ -172,7 +149,6 @@ button {
 
 .li li a:hover {
     color: #FFC000;
-
 }
 
 .li li {
@@ -211,10 +187,9 @@ button {
 }
 
 /*FirstPage*/
+
 .title {
-
     font-family: 'Frank';
-
     background: url(../img/boy.png) 90% 100%/750px 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     -webkit-box-shadow: 0px -10px 8px 0px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px -10px 8px 0px rgba(34, 60, 80, 0.2) inset;
@@ -223,10 +198,7 @@ button {
     align-items: center;
     height: 100vh;
     width: 100vw;
-
 }
-
-
 
 .TitleWord {
     left: 20%;
@@ -234,7 +206,6 @@ button {
     max-width: 60%;
     position: relative;
     top: 40%;
-
 }
 
 .TitleWord {
@@ -254,8 +225,6 @@ button {
 .TitleWord span {
     color: #79818d;
     font-size: 15px;
-
-
 }
 
 .TitleWord input {
@@ -275,6 +244,7 @@ button {
     margin-right: 2%;
     margin-left: 2%;
 }
+
 .TitleWord input:hover {
     background-color: #6d7682;
     color: #fff;
@@ -286,20 +256,13 @@ button {
     -ms-transform: scale(1.1);
 }
 
+/*Info_Me*/
 
-
-.row h2 {
-
-
+.info_me h2 {
     font-size: 25px;
     color: #38475a;
     font-weight: bold;
-    text-transform: capitalize
-}
-
-.info_me .cherta_about_me {
-    background: url(../img/cherta.jpg);
-
+    text-transform: capitalize;
 }
 
 .RandomWord {
@@ -311,7 +274,6 @@ button {
     text-align: center;
 }
 
-
 [value="Скачать Резюме"] {
 
     color: #6f707e;
@@ -320,62 +282,6 @@ button {
     border-radius: 5px;
     padding: 10px 14px 10px 32px;
     background: url(../img/dowl.jpg) 10px 8px no-repeat;
-}
-
-.i_can {
-    background: url(../img/What_i_can.jpg) 100%/100% 100% no-repeat;
-    height: 522px;
-
-}
-
-
-
-.i_can h2 {
-    font-size: 25px;
-    color: #38475a;
-}
-
-.All_Info b {
-    font-size: 16px;
-    color: #e87700;
-
-}
-
-.All_Info .Lorem {
-    max-width: 200px;
-    text-align: center;
-    line-height: 19px;
-    font-family: Arial, sans-serif;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-
-}
-
-
-
-.All_Info .Lorem {
-    line-height: 15px;
-    font-size: 13px;
-}
-
-.Optimision {
-    text-align: center;
-}
-
-.Web {
-    text-align: center;
-
-}
-
-
-
-
-
-
-.Case [Lorem_Case="Lorem_case"] {
-    color: #38475a;
-    font-family: Arial, sans-serif;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-    text-align: center;
 }
 
 .info_me input {
@@ -398,38 +304,79 @@ button {
     -ms-transform: scale(1.0);
 }
 
+/*I_Can*/
 
+.i_can h2 {
+     font-size: 25px;
+    color: #38475a;
+    font-weight: bold;
+    text-transform: capitalize;
+}
 
-.Case {
-    height: 1216px;
+.i_can {
+    background: url(../img/What_i_can.jpg) 100%/100% 100% no-repeat;
+    height: 522px;
 
 }
 
+.All_Info b {
+    font-size: 16px;
+    color: #e87700;
+}
+
+.All_Info .Lorem {
+    max-width: 200px;
+    text-align: center;
+    line-height: 19px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.All_Info .Lorem {
+    line-height: 15px;
+    font-size: 13px;
+}
+
+.Optimision {
+    text-align: center;
+}
+
+.Web {
+    text-align: center;
+}
+
+/*Cases*/
+
+.Case h2 {
+    font-size: 25px;
+    color: #38475a;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.Case [Lorem_Case="Lorem_case"] {
+    color: #38475a;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.Case {
+    height: 1216px;
+}
 
 .allin {
     max-width: 86%;
 }
 
-
-.AboutCompani {
-    font-size: 13px;
-    width: 150px;
-    color: #2f4154;
-    font-family: Arial, sans-serif;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-
-}
-
-.fyo {
+.outInfoProject {
     background: url(../img/case.jpg) 50% 10%/74% 100% no-repeat;
 
     height: 50%;
     margin-top: 50px;
 }
 
-
-
-.oop {
+.Spoiler {
     margin-top: -160px;
     margin-left: 10px;
 }
@@ -440,7 +387,7 @@ summary p {
     color: #2f4154;
 }
 
-.oop k {
+.Spoiler k {
     font-size: 13px;
     width: 150px;
     color: #2f4154;
@@ -454,9 +401,6 @@ summary l {
     color: #f58953;
 }
 
-
-
-
 .InfoProject h3 {
     font-size: 19px;
     font-weight: bold;
@@ -465,6 +409,14 @@ summary l {
 
 .AboutWebsite {
     font-size: 13px;
+    color: #2f4154;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.AboutCompani {
+    font-size: 13px;
+    width: 150px;
     color: #2f4154;
     font-family: Arial, sans-serif;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
@@ -506,26 +458,22 @@ summary l {
     font-family: Arial, sans-serif;
     font-weight: 540;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-
-
-
 }
+
+/*CostCalculation*/
 
 .box {
     height: 105%;
     width: 80%;
     padding-bottom: 3%;
-    left: 10%;
+    margin: 0 auto;
     position: relative;
     margin-top: 20px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-margin-bottom: 33px;
+    margin-bottom: 33px;
 }
-
-
-
 
 .Cost_calc {
     font-size: 35px;
@@ -535,12 +483,9 @@ margin-bottom: 33px;
     line-height: 15px;
 }
 
-
-
 .typesite {
     color: #102031;
     font-size: 22px;
-
     margin-top: 59px;
     font-weight: bold;
 
@@ -577,29 +522,22 @@ select:focus {
     font-size: 22px;
     margin-left: 34%;
     font-weight: bold;
-
 }
 
 [value="a"] {
     background-color: darkcyan;
     color: #fff;
-
 }
 
 [value="b"] {
     background-color: darkcyan;
     color: #fff;
-
-
 }
 
 [value="c"] {
     background-color: darkcyan;
     color: #fff;
-
-
 }
-
 
 .terms {
     font-size: 20px;
@@ -613,13 +551,13 @@ select:focus {
     font-weight: 100;
 }
 
-.nol {
+.HowLong {
     margin-top: -22px;
     font-size: 22px;
     color: #102032;
 }
 
-.nol2 {
+.HowMuch {
     margin-top: -22px;
     font-size: 22px;
     color: #102032;
@@ -650,17 +588,13 @@ select:focus {
     background: #01BCB4;
 }
 
-
 .fon {
     background: url(../img/lowstatic.jpg)100% 100%/100% 100% no-repeat;
     height: 500px;
     width: 100%;
     margin-bottom: 106px;
     background-attachment: local;
-
 }
-
-
 
 .lows {
     font-size: 30px;
@@ -668,30 +602,29 @@ select:focus {
     text-transform: uppercase;
     margin-top: 103px;
     text-align: center;
-
 }
-
-
-
-    .s {
-        font-size: 30px;
-    }
-
-    .h {
-        font-size: 30px;
-    }
-
-    .b {
-        font-size: 30px;
-    }
-
-    .n {
-        font-size: 30px;
-    }
-
 
 .stat {
     display: flex;
+}
+
+@media (max-width:780px) {
+    .One_hund_twen {
+        font-size: 30px;
+    }
+
+    .thousand {
+        font-size: 30px;
+    }
+
+    .hundred {
+        font-size: 30px;
+    }
+
+    .twenty {
+        font-size: 30px;
+
+    }
 }
 
 .chisl {
@@ -711,14 +644,15 @@ select:focus {
     font-weight: 600;
 }
 
-.ans {
+/*Revies*/
+
+.Revies {
     font-size: 25px;
     color: #162c41;
 }
 
-.loremotz {
+.loremRevievs {
     font-size: 13px;
-
     color: #172c41;
     width: 688px;
     text-align: center;
@@ -733,7 +667,6 @@ select:focus {
     font-family: Arial, sans-serif;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
     font-weight: 530;
-
 }
 
 .nameMan b {
@@ -745,8 +678,6 @@ select:focus {
     height: 9px;
     width: 9px;
     background-color: rgba(207, 210, 215, 1);
-
-
 }
 
 .dota2 {
@@ -767,41 +698,35 @@ select:focus {
     margin-left: 5%;
 }
 
-.end {
-    background: url(../img/Lastfon.jpg)100% 100%/100% 100% no-repeat;
-    height: 810px;
-}
-
-
-
-.My_Contact {
-    color: #fff;
-    font-size: 30px;
-}
-
 .loremen {
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/*Connaction*/
 
+.Connact {
+    background: url(../img/Lastfon.jpg)100% 100%/100% 100% no-repeat;
+    height: 810px;
+}
 
+.My_Contact {
+    color: #fff;
+    font-size: 30px;
+}
 
-
-.ad {
+.adress {
     color: #fff;
     text-align: center;
 }
 
-.ma {
+.mail {
     color: #fff;
-
 }
 
-.no {
+.phone_num {
     color: #fff;
-
 }
 
 .connection b {
@@ -821,31 +746,22 @@ select:focus {
     text-align: center;
 }
 
-
 .data [type="text"],
 [type="email"] {
-
     height: 35px;
     background-color: rgba(206, 208, 212, 0.9);
-
     width: 352px;
-
 }
-
-
 
 [placeholder="Имя"] {
     text-indent: 6px;
 }
 
-
 [placeholder="Email"] {
     text-indent: 6px;
-
 }
 
 .data [ name="q"] {
-
     height: 95px;
     background-color: rgba(206, 208, 212, 0.9);
     text-indent: 6px;
@@ -855,7 +771,6 @@ select:focus {
     min-width: 320px;
     max-width: 725px;
     width: 725px;
-
 }
 
 [placeholder="Имя"]:focus {
@@ -893,10 +808,12 @@ select:focus {
     border: 2px solid #fff;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
-
-
     -o-transition: all 0.2s;
     position: relative;
+}
+
+.knopka input:active {
+    transform: scale(1.1)
 }
 
 .knopka input:hover {
@@ -905,44 +822,45 @@ select:focus {
     color: #10192A;
 }
 
-.knopka input:active {
-    transform: scale(1.1)
-}
+/*Map*/
 
-.karta {
+.map {
     background: url(../img/karta.jpg) 50% 100%/100% 100% no-repeat;
     height: 350px;
 }
 
-
-
-.karta input {
+.map input {
     margin-top: 160px;
     margin-left: -10px;
-
-
     height: 40px;
     width: 95px;
     padding: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform, all 0.75s;
+    -webkit-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    color: #000;
+    background: #fff;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
 }
 
-
-
-.karta input:hover {
+.map input:hover {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: translate(0, -30px);
     -webkit-transform: translate(0, -30px);
     -ms-transform: translate(0, -30px);
-
 }
 
-.karta input:active {
+.map input:active {
     transform: skewX(10deg);
     -webkit-transform: skewX(10deg);
     -ms-transform: skewX(10deg);
 }
+
+/*LastFon*/
 
 .lastfon {
     margin-top: -6px;
@@ -950,7 +868,6 @@ select:focus {
     width: 100%;
     background-color: #2c3e51;
     display: flex;
-
     justify-content: center;
 }
 
@@ -975,6 +892,7 @@ select:focus {
 
     }
 }
+
 @keyframes endlod {
     0% {
         opacity: 1;
@@ -995,6 +913,7 @@ select:focus {
     }
 
 }
+
 @keyframes lod {
     0% {
         transform: translateY(0);
@@ -1016,41 +935,38 @@ select:focus {
     }
 
 }
+
 @keyframes logoani {
     from {
         opacity: 0;
-
     }
 
     to {
         opacity: 1;
         margin-top: 15px;
-
-
     }
 
     .Loader {
         z-index: -10;
     }
 }
+
 @keyframes allme {
 
     from {
         margin-top: -60px;
-
     }
 
     to {
         opacity: 1;
         margin-top: 8px;
-
     }
 }
+
 @keyframes allmenu {
 
     from {
         margin-top: -60px;
-
     }
 
     to {
@@ -1058,25 +974,24 @@ select:focus {
         margin-top: 17px;
     }
 }
+
 @keyframes allmenu {
 
     from {
         margin-top: -60px;
-
     }
 
     to {
         opacity: 1;
         margin-top: 17px;
-
     }
 }
+
 /*Media*/
 @media(max-width:1514px) {
     .TitleWord {
         left: 10%;
         top: 40%;
-
     }
 
 }
@@ -1085,7 +1000,6 @@ select:focus {
     .TitleWord {
         left: 10%;
         top: 40%;
-
     }
 
     .title {
@@ -1098,7 +1012,6 @@ select:focus {
     .TitleWord {
         left: 10%;
         top: 40%;
-
     }
 
     .title {
@@ -1112,13 +1025,11 @@ select:focus {
     .TitleWord h1 {
         line-height: 65px;
         font-size: 55px;
-
     }
 
     .title {
         background: url(../img/boy.png) 98% 100%/60% 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
-
 }
 
 @media(max-width: 1060px) {
@@ -1126,13 +1037,11 @@ select:focus {
     .TitleWord {
         left: 5%;
         top: 40%;
-
     }
 
     .title {
         background: url(../img/boy.png) 98% 100%/65% 85% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
-
 }
 
 @media(max-width:992px) {
@@ -1148,8 +1057,6 @@ select:focus {
         color: #fff;
         font-size: 50px;
         line-height: 55px;
-
-
     }
 
     .TitleWord input {
@@ -1158,9 +1065,7 @@ select:focus {
         font-size: 16px;
     }
 
-
     .TitleWord {
-
         top: 0%;
         display: -webkit-flex;
         display: -moz-flex;
@@ -1171,7 +1076,6 @@ select:focus {
         align-items: flex-end;
         padding-bottom: 40px;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-
     }
 
     .title {
@@ -1188,8 +1092,6 @@ select:focus {
     .title {
         background: url(../img/boy.png) 60% 100%/90% 95% no-repeat, url(../img/fon.jpg) 100% 60px/100% 100% no-repeat;
     }
-
-
 }
 
 @media(max-width: 893px) {
@@ -1212,11 +1114,7 @@ select:focus {
         color: #fff;
         font-size: 60px;
         line-height: 65px;
-
-
     }
-
-
 }
 
 @media(max-width: 691px) {
@@ -1230,10 +1128,7 @@ select:focus {
         color: #fff;
         font-size: 50px;
         line-height: 50px;
-
-
     }
-
 }
 
 @media(max-width: 397px) {
@@ -1255,13 +1150,14 @@ select:focus {
         font-size: 22px;
     }
 }
+
 @media(max-width:992px) {
     .i_can {
         background: url(../img/What_i_can.jpg) 100%/1100px 100% no-repeat;
         height: 522px;
-
     }
 }
+
 @media(max-width:767px) and (min-width:499px) {
     .All_Info b {
         font-size: 14px;
@@ -1273,30 +1169,32 @@ select:focus {
         font-size: 12px;
     }
 }
+
 @media(max-width:530px) {
     .All_Info b {
         font-size: 13px;
-
     }
 }
+
 @media(max-width:992px) {
-    .fyo {
+    .outInfoProject {
         background: url(../img/case.jpg) 50% 10%/90% 100% no-repeat;
     }
 }
 
 @media(max-width:768px) and (min-width:578px) {
-    .fyo {
+    .outInfoProject {
         background: url(../img/case.jpg) 50% 10%/100% 100% no-repeat;
     }
 }
 
 @media(max-width:577px) {
-    .fyo {
+    .outInfoProject {
         background: url(../img/2022-06-17_00-53-01.png) 0% 10%/100% 100% no-repeat;
     }
 
 }
+
 @media(max-width:1096px) {
 
     .box {
@@ -1304,12 +1202,14 @@ select:focus {
         position: static;
     }
 }
+
 @media (max-width:386px) {
     .Cost_calc {
         font-size: 26px;
 
     }
 }
+
 @media(min-width:1024px) {
     .fon {
         background-attachment: fixed;
@@ -1322,6 +1222,7 @@ select:focus {
     }
 
 }
+
 @media (max-width:991px) {
     .smail {
         font-size: 13px;
@@ -1368,31 +1269,34 @@ select:focus {
 
     }
 }
-    @media (max-width:1400px) {
-    .end {
+
+@media (max-width:1400px) {
+    .Connact {
         background: url(../img/Lastfon.jpg)50% 100%/1920px 100% no-repeat;
     }
 }
-    @media (max-width:393px) {
+
+@media (max-width:393px) {
     .loremen {
         font-size: 12px;
     }
 
-    .ad {
+    .adress {
         font-size: 12px;
     }
 
-    .ma {
+    .mail {
         font-size: 12px;
 
     }
 
-    .no {
+    .phone_num {
         font-size: 12px;
 
     }
 }
-    @media(max-width:991px) {
+
+@media(max-width:991px) {
 
     .data [type="text"],
     [type="email"] {
@@ -1421,10 +1325,17 @@ select:focus {
 
 
 }
-    @media(max-width:1360px) {
-    .karta {
+
+@media(max-width:1360px) {
+    .map {
         background: url(../img/karta.jpg) 50% 0%/1500px 100% no-repeat;
 
     }
 }
 
+@media(min-width:1338px) {
+    .box img {
+        width: 150%;
+    }
+
+}
