@@ -4,19 +4,34 @@
 
 let typeWeb = prompt(`Какой сайт вы хотите?\n\n1 - Визитка\n2 - Промо-сайты\n3 - Интернет - витрины\n\nВвод цифры от 1-3`, 0);
 
-if (typeWeb > 3) alert("Значение не подходит")
-if (typeWeb < 0) alert("Значение не подходит")
+if (typeWeb > 3 || typeWeb < 0){
+
+    while(typeWeb > 3 || typeWeb < 0){
+         alert("Значение не подходит");
+        typeWeb = prompt(`Попробуйте заново\nКакой сайт вы хотите?\n\n1 - Визитка\n2 - Промо-сайты\n3 - Интернет - витрины\n\nВвод цифры от 1-3`, 0);
+    }
+}
 
 let designWeb = prompt(`Дизайн сайта?\n\n1 - Уникальный\n2 - Шаблонный\n3 - Ретро \n\nВвод цифры от 1-3`, 0);
 
-if (designWeb > 3) alert("Значение не подходит")
-if (designWeb < 0) alert("Значение не подходит")
+if (designWeb > 3 || designWeb < 0){
+
+    while(designWeb > 3 || designWeb < 0){
+        alert("Значение не подходит");
+       designWeb = prompt(`Попробуйте заново\nДизайн сайта?\n\n1 - Уникальный\n2 - Шаблонный\n3 - Ретро \n\nВвод цифры от 1-3`, 0);
+    }
+}
+
 
 let creatWeb = prompt(`Какая будет верстка?\n\n1 - Адаптивная\n2 - Резиновая\n3 - Фиксированная\n\nВвод цифры от 1-3`, 0);
 
-if (creatWeb > 3) alert("Значение не подходит")
-if (creatWeb < 0) alert("Значение не подходит")
+if (creatWeb > 3 || creatWeb < 0){
 
+    while(creatWeb > 3 || creatWeb < 0){
+        alert("Значение не подходит");
+      creatWeb = prompt(`Попробуйте заново\nКакая будет верстка?\n\n1 - Адаптивная\n2 - Резиновая\n3 - Фиксированная\n\nВвод цифры от 1-3`, 0);
+    }
+}
 
 //PriceWeb
 
@@ -84,5 +99,9 @@ let takeTwoPrice = takeResultDesign(collectionWeb);
 let takeThreePrice = takeResultCreat(collectionWeb);
 
 let result = takeOnePrice + takeTwoPrice + takeThreePrice;
+
+if(isNaN(result))result = 0;
+
+/*Conclusion*/
 
 alert("Цена сайта обойдется вам в: " + result + "руб");
