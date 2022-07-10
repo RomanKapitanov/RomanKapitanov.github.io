@@ -1,107 +1,403 @@
 "use strict"
 
+//Calc in block find cost
+//PriceWeb & Terms
+
+let priceType = 0;
+let priceDesign = 0;
+let priceCreat = 0;
+
+let termsType = 0;
+let termsDesign = 0;
+let termsCreat = 0;
+
 //ChangeWeb
 
-let typeWeb = prompt(`Какой сайт вы хотите?\n\n1 - Визитка\n2 - Промо-сайты\n3 - Интернет - витрины\n\nВвод цифры от 1-3`, 0);
+let typeWeb = $('select[name=selectedOne] option:selected').val();
+let designWeb = $('select[name=selectedTwo] option:selected').val();
+let creatWeb = $('select[name=selectedThree] option:selected').val();
 
-if (typeWeb > 3 || typeWeb < 0){
+$('.changeOne').click(function () {
 
-    while(typeWeb > 3 || typeWeb < 0){
-         alert("Значение не подходит");
-        typeWeb = prompt(`Попробуйте заново\nКакой сайт вы хотите?\n\n1 - Визитка\n2 - Промо-сайты\n3 - Интернет - витрины\n\nВвод цифры от 1-3`, 0);
+    let typeWeb = $('select[name=selectedOne] option:selected').val();
+
+    if (typeWeb == "standart") {
+        priceType = 0;
+        termsType = 0;
+    }
+    if (typeWeb == "cutaway") {
+        priceType = 50;
+        termsType = 6;
+    }
+    if (typeWeb == "promo__sites") {
+        priceType = 60;
+        termsType = 7;
+    }
+    if (typeWeb == "shop__window") {
+        priceType = 70;
+        termsType = 8;
+    }
+
+    //CalculatorWeb
+
+    let resultPrice = priceType + priceDesign + priceCreat;
+    let resultTerms = termsType + termsDesign + termsCreat;
+
+    /*Conclusion*/
+
+    $(".HowMuch").html(resultPrice + " Руб");
+    $(".HowLong").html(resultTerms + " Дней");
+
+})
+
+$('.changeTwo').click(function () {
+    let designWeb = $('select[name=selectedTwo] option:selected').val();
+
+    if (designWeb == "standart") {
+        priceDesign = 0;
+        termsDesign = 0;
+    }
+    if (designWeb == "unique") {
+        priceDesign = 50;
+        termsDesign = 8;
+    }
+    if (designWeb == "formulaic") {
+        priceDesign = 60;
+        termsDesign = 7;
+    }
+    if (designWeb == "retro") {
+        priceDesign = 70;
+        termsDesign = 6;
+    }
+
+    //CalculatorWeb
+
+    let resultPrice = priceType + priceDesign + priceCreat;
+    let resultTerms = termsType + termsDesign + termsCreat;
+
+    /*Conclusion*/
+
+    $(".HowMuch").html(resultPrice + " Руб");
+    $(".HowLong").html(resultTerms + " Дней");
+
+})
+
+$('.changeThree').click(function () {
+    let creatWeb = $('select[name=selectedThree] option:selected').val();
+
+    if (creatWeb == "standart") {
+        priceCreat = 0;
+        termsCreat = 0;
+    }
+    if (creatWeb == "adaptive") {
+        priceCreat = 50;
+        termsCreat = 40;
+    }
+    if (creatWeb == "rubber") {
+        priceCreat = 60;
+        termsCreat = 45;
+    }
+    if (creatWeb == "fixed") {
+        priceCreat = 70;
+        termsCreat = 200;
+    }
+
+    //CalculatorWeb
+
+    let resultPrice = priceType + priceDesign + priceCreat;
+    let resultTerms = termsType + termsDesign + termsCreat;
+
+    /*Conclusion*/
+
+    $(".HowMuch").html(resultPrice + " Руб");
+    $(".HowLong").html(resultTerms + " Дней");
+})
+
+//run stat
+const animItems = document.querySelectorAll('.chisl');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+
+                //running numbers in block stat(start)
+                //run__OneNum
+
+                const timeOneNum = 1100; //ms
+                const stepOneNum = 1;
+
+                function runNumOne(num, elem) {
+
+                    let l = document.querySelector('#' + elem);
+                    let n = 0;
+                    let t = Math.round(timeOneNum / (num / stepOneNum));
+                    let interval = setInterval(() => {
+                        n = n + stepOneNum;
+                        if (n == num) clearInterval(interval);
+                        l.innerHTML = n;
+                    }, t)
+                }
+
+                runNumOne(120, 'outOneNum');
+
+
+                //run__TwoNum
+
+                const timeTwoNum = 1100; //ms
+                const stepTwoNum = 40;
+
+                function runNumTwo(num, elem) {
+
+                    let l = document.querySelector('#' + elem);
+                    let n = 0;
+                    let t = Math.round(timeTwoNum / (num / stepTwoNum));
+                    let interval = setInterval(() => {
+                        n = n + stepTwoNum;
+                        if (n == num) clearInterval(interval);
+                        l.innerHTML = n;
+                    }, t)
+                }
+
+                runNumTwo(4600, 'outTwoNum');
+
+                //run__ThreeNum
+
+                const timeThreeNum = 1100; //ms
+                const stepThreeNum = 2;
+
+                function runNumThree(num, elem) {
+
+                    let l = document.querySelector('#' + elem);
+                    let n = 0;
+                    let t = Math.round(timeThreeNum / (num / stepThreeNum));
+                    let interval = setInterval(() => {
+                        n = n + stepThreeNum;
+                        if (n == num) clearInterval(interval);
+                        l.innerHTML = n;
+                    }, t)
+                }
+
+                runNumThree(340, 'outThreeNum');
+
+                //run__FourNum
+
+                const timeFourNum = 1100; //ms
+                const stepFourNum = 1;
+
+                function runNumFour(num, elem) {
+
+                    let l = document.querySelector('#' + elem);
+                    let n = 0;
+                    let t = Math.round(timeFourNum / (num / stepFourNum));
+                    let interval = setInterval(() => {
+                        n = n + stepFourNum;
+                        if (n == num) clearInterval(interval);
+                        l.innerHTML = n;
+                    }, t)
+                }
+                runNumFour(23, 'outFourNum');
+
+            }
+        }
+    }
+}
+//running numbers in block stat(end^)
+
+function offset(el) {
+    const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
     }
 }
 
-let designWeb = prompt(`Дизайн сайта?\n\n1 - Уникальный\n2 - Шаблонный\n3 - Ретро \n\nВвод цифры от 1-3`, 0);
 
-if (designWeb > 3 || designWeb < 0){
 
-    while(designWeb > 3 || designWeb < 0){
-        alert("Значение не подходит");
-       designWeb = prompt(`Попробуйте заново\nДизайн сайта?\n\n1 - Уникальный\n2 - Шаблонный\n3 - Ретро \n\nВвод цифры от 1-3`, 0);
+//anchor links
+//anchor links active or not active
+
+$(window).scroll(() => {
+    let scrollDistance = $(window).scrollTop();
+
+    $(".section").each((i, el) => {
+        if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
+            $("nav .li").each((i, el) => {
+                if ($(el).hasClass("active")) {
+                    $(el).removeClass("active");
+                }
+            });
+
+            $('nav li:eq(' + i + ')').find('.li').addClass('active');
+        }
+    });
+});
+
+
+//bad img -> good img
+
+
+const animItemss = document.querySelectorAll('.image-link');
+
+if (animItemss.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    function animOnScroll() {
+        for (let index = 0; index < animItemss.length; index++) {
+            const animItem = animItemss[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+
+                $('.onePic').attr("src", $('.onePic').attr("data-src"));
+                $('.twoPic').attr("src", $('.twoPic').attr("data-src"));
+                $('.threePic').attr("src", $('.threePic').attr("data-src"));
+                $('.fourPic').attr("src", $('.fourPic').attr("data-src"));
+                $('.fivePic').attr("src", $('.fivePic').attr("data-src"));
+                $('.sixPic').attr("src", $('.sixPic').attr("data-src"));
+                $('.sevenPic').attr("src", $('.sevenPic').attr("data-src"));
+                $('.eightPic').attr("src", $('.eightPic').attr("data-src"));
+                $('.ninePic').attr("src", $('.ninePic').attr("data-src"));
+                $('.tenPic').attr("src", $('.tenPic').attr("data-src"));
+                $('.elevenPic').attr("src", $('.elevenPic').attr("data-src"));
+                $('.twelvePic').attr("src", $('.twelvePic').attr("data-src"));
+
+            }
+        }
+    }
+}
+
+function offset(el) {
+    const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
     }
 }
 
 
-let creatWeb = prompt(`Какая будет верстка?\n\n1 - Адаптивная\n2 - Резиновая\n3 - Фиксированная\n\nВвод цифры от 1-3`, 0);
+//slider for REVIEWs
 
-if (creatWeb > 3 || creatWeb < 0){
+$('#button1').click(function () {
 
-    while(creatWeb > 3 || creatWeb < 0){
-        alert("Значение не подходит");
-      creatWeb = prompt(`Попробуйте заново\nКакая будет верстка?\n\n1 - Адаптивная\n2 - Резиновая\n3 - Фиксированная\n\nВвод цифры от 1-3`, 0);
-    }
-}
+    $('.slider__out').css("display", "block"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "none")
+});
 
-//PriceWeb
+$('#button2').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "block"),
+        $('.slider__outThree').css("display", "none")
+});
 
-let priceTypeOne = 0;
-let priceTypeTwo = 0;
-let priceTypeThree = 0;
+$('#button3').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "block")
+});
 
-let priceDesignOne = 0;
-let priceDesignTwo = 0;
-let priceDesignThree = 0;
+$('#button1').click(function () {
+    $('.slider__out').css("opasity", "0"),
+        $('.slider__out').css("transform", " translate(0px, 100px)"),
+        $('.slider__out').css("transition", "2s"),
+        $('.slider__out').css("opasity", "1"),
+        $('.slider__out').css("transform", "translate(0px, 0px)")
+});
 
-let priceCreatOne = 0;
-let priceCreatTwo = 0;
-let priceCreatThree = 0;
+$('#button2').click(function () {
+    $('.slider__outTwo').css("opasity", "0"),
+        $('.slider__outTwo').css("transform", " translate(0px, 100px)"),
+        $('.slider__outTwo').css("transition", "2s"),
+        $('.slider__outTwo').css("opasity", "1"),
+        $('.slider__outTwo').css("transform", "translate(0px, 0px)")
+})
 
+$('#button3').click(function () {
+    $('.slider__outThree').css("opasity", "0"),
+        $('.slider__outThree').css("transform", " translate(0px, 100px)"),
+        $('.slider__outThree').css("transition", "2s"),
+        $('.slider__outThree').css("opasity", "1"),
+        $('.slider__outThree').css("transform", "translate(0px, 0px)")
 
-if (typeWeb == 1) priceTypeOne = 50;
-if (typeWeb == 2) priceTypeTwo = 60;
-if (typeWeb == 3) priceTypeThree = 70;
+});
 
-if (designWeb == 1) priceDesignOne = 10;
-if (designWeb == 2) priceDesignTwo = 20;
-if (designWeb == 3) priceDesignThree = 30;
+//стрелочки
 
-if (creatWeb == 1) priceCreatOne = 80;
-if (creatWeb == 2) priceCreatTwo = 90;
-if (creatWeb == 3) priceCreatThree = 100;
+$('.rightSlider').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "block"),
+        $('.slider__outThree').css("display", "none")
+    $('#button2').trigger('click');
+});
 
-//CalculatorWeb
+$('.rightSliderTwo').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "block")
+    $('#button3').trigger('click');
 
-let collectionWeb = [
-    [priceTypeOne, priceTypeTwo, priceTypeThree],
-    [priceDesignOne, priceDesignTwo, priceDesignThree],
-    [priceCreatOne, priceCreatTwo, priceCreatThree]
-];
+});
 
-function takeResultType(Array = []) {
+$('.rightSliderThree').click(function () {
+    $('.slider__out').css("display", "block"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "none")
+    $('#button1').trigger('click');
 
-    for (let k = 0; k < collectionWeb["0"].length; k++) {
+});
 
-        let resultType = 0 + collectionWeb["0"][k];
-        if (resultType > 0) return resultType;
-    }
-}
+$('.leftSlider').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "block")
+    $('#button3').trigger('click');
+});
 
-function takeResultDesign(Array = []) {
+$('.leftSliderTwo').click(function () {
+    $('.slider__out').css("display", "block"),
+        $('.slider__outTwo').css("display", "none"),
+        $('.slider__outThree').css("display", "none")
+    $('#button1').trigger('click');
+});
 
-    for (let j = 0; j < collectionWeb["1"].length; j++) {
+$('.leftSliderThree').click(function () {
+    $('.slider__out').css("display", "none"),
+        $('.slider__outTwo').css("display", "block"),
+        $('.slider__outThree').css("display", "none")
+    $('#button2').trigger('click');
+});
+//modal
 
-        let resultDesign = 0 + collectionWeb["1"][j];
-        if (resultDesign > 0) return resultDesign;
-    }
-}
+$(document).ready(function () {
+    $('.image-link').magnificPopup({
+        type: 'image'
+    });
+});
 
-function takeResultCreat(Array = []) {
-    for (let p = 0; p < collectionWeb["2"].length; p++) {
-
-        let resultCreat = 0 + collectionWeb["2"][p];
-        if (resultCreat > 0) return resultCreat;
-    }
-}
-
-let takeOnePrice = takeResultType(collectionWeb);
-let takeTwoPrice = takeResultDesign(collectionWeb);
-let takeThreePrice = takeResultCreat(collectionWeb);
-
-let result = takeOnePrice + takeTwoPrice + takeThreePrice;
-
-if(isNaN(result))result = 0;
-
-/*Conclusion*/
-
-alert("Цена сайта обойдется вам в: " + result + "руб");
+setTimeout(function () {
+    $('.invisib__button').trigger('click');
+}, 20000);
