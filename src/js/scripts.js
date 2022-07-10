@@ -13,11 +13,7 @@ let termsCreat = 0;
 
 //ChangeWeb
 
-let typeWeb = $('select[name=selectedOne] option:selected').val();
-let designWeb = $('select[name=selectedTwo] option:selected').val();
-let creatWeb = $('select[name=selectedThree] option:selected').val();
-
-$('.changeOne').click(function () {
+$('.changeOne').change(function () {
 
     let typeWeb = $('select[name=selectedOne] option:selected').val();
 
@@ -45,12 +41,12 @@ $('.changeOne').click(function () {
 
     /*Conclusion*/
 
-    $(".HowMuch").html(resultPrice + " Руб");
-    $(".HowLong").html(resultTerms + " Дней");
+    $(".HowMuch").html(resultPrice);
+    $(".HowLong").html(resultTerms);
 
 })
 
-$('.changeTwo').click(function () {
+$('.changeTwo').change(function () {
     let designWeb = $('select[name=selectedTwo] option:selected').val();
 
     if (designWeb == "standart") {
@@ -77,12 +73,12 @@ $('.changeTwo').click(function () {
 
     /*Conclusion*/
 
-    $(".HowMuch").html(resultPrice + " Руб");
-    $(".HowLong").html(resultTerms + " Дней");
+    $(".HowMuch").html(resultPrice );
+    $(".HowLong").html(resultTerms );
 
 })
 
-$('.changeThree').click(function () {
+$('.changeThree').change(function () {
     let creatWeb = $('select[name=selectedThree] option:selected').val();
 
     if (creatWeb == "standart") {
@@ -109,8 +105,8 @@ $('.changeThree').click(function () {
 
     /*Conclusion*/
 
-    $(".HowMuch").html(resultPrice + " Руб");
-    $(".HowLong").html(resultTerms + " Дней");
+    $(".HowMuch").html(resultPrice );
+    $(".HowLong").html(resultTerms );
 })
 
 //run stat
