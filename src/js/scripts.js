@@ -12,7 +12,6 @@ let termsDesign = 0;
 let termsCreat = 0;
 
 //ChangeWeb
-
 $('.changeOne').change(function () {
 
     let typeWeb = $('select[name=selectedOne] option:selected').val();
@@ -35,12 +34,10 @@ $('.changeOne').change(function () {
     }
 
     //CalculatorWeb
-
     let resultPrice = priceType + priceDesign + priceCreat;
     let resultTerms = termsType + termsDesign + termsCreat;
 
     /*Conclusion*/
-
     $(".HowMuch").html(resultPrice);
     $(".HowLong").html(resultTerms);
 
@@ -67,12 +64,10 @@ $('.changeTwo').change(function () {
     }
 
     //CalculatorWeb
-
     let resultPrice = priceType + priceDesign + priceCreat;
     let resultTerms = termsType + termsDesign + termsCreat;
 
     /*Conclusion*/
-
     $(".HowMuch").html(resultPrice );
     $(".HowLong").html(resultTerms );
 
@@ -99,12 +94,10 @@ $('.changeThree').change(function () {
     }
 
     //CalculatorWeb
-
     let resultPrice = priceType + priceDesign + priceCreat;
     let resultTerms = termsType + termsDesign + termsCreat;
 
     /*Conclusion*/
-
     $(".HowMuch").html(resultPrice );
     $(".HowLong").html(resultTerms );
 })
@@ -131,7 +124,6 @@ if (animItems.length > 0) {
 
                 //running numbers in block stat(start)
                 //run__OneNum
-
                 const timeOneNum = 1100; //ms
                 const stepOneNum = 1;
 
@@ -151,7 +143,6 @@ if (animItems.length > 0) {
 
 
                 //run__TwoNum
-
                 const timeTwoNum = 1100; //ms
                 const stepTwoNum = 40;
 
@@ -170,7 +161,6 @@ if (animItems.length > 0) {
                 runNumTwo(4600, 'outTwoNum');
 
                 //run__ThreeNum
-
                 const timeThreeNum = 1100; //ms
                 const stepThreeNum = 2;
 
@@ -189,7 +179,6 @@ if (animItems.length > 0) {
                 runNumThree(340, 'outThreeNum');
 
                 //run__FourNum
-
                 const timeFourNum = 1100; //ms
                 const stepFourNum = 1;
 
@@ -211,7 +200,6 @@ if (animItems.length > 0) {
     }
 }
 //running numbers in block stat(end^)
-
 function offset(el) {
     const rect = el.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -226,7 +214,6 @@ function offset(el) {
 
 //anchor links
 //anchor links active or not active
-
 $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
 
@@ -245,8 +232,6 @@ $(window).scroll(() => {
 
 
 //bad img -> good img
-
-
 const animItemss = document.querySelectorAll('.image-link');
 
 if (animItemss.length > 0) {
@@ -296,7 +281,6 @@ function offset(el) {
 
 
 //slider for REVIEWs
-
 $('#button1').click(function () {
 
     $('.slider__out').css("display", "block"),
@@ -341,8 +325,7 @@ $('#button3').click(function () {
 
 });
 
-//стрелочки
-
+//ArrowsSlider Reviws
 $('.rightSlider').click(function () {
     $('.slider__out').css("display", "none"),
         $('.slider__outTwo').css("display", "block"),
@@ -386,8 +369,9 @@ $('.leftSliderThree').click(function () {
         $('.slider__outThree').css("display", "none")
     $('#button2').trigger('click');
 });
-//modal
 
+
+//Modal
 $(document).ready(function () {
     $('.image-link').magnificPopup({
         type: 'image'
