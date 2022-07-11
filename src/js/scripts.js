@@ -68,8 +68,8 @@ $('.changeTwo').change(function () {
     let resultTerms = termsType + termsDesign + termsCreat;
 
     /*Conclusion*/
-    $(".HowMuch").html(resultPrice );
-    $(".HowLong").html(resultTerms );
+    $(".HowMuch").html(resultPrice);
+    $(".HowLong").html(resultTerms);
 
 })
 
@@ -98,11 +98,12 @@ $('.changeThree').change(function () {
     let resultTerms = termsType + termsDesign + termsCreat;
 
     /*Conclusion*/
-    $(".HowMuch").html(resultPrice );
-    $(".HowLong").html(resultTerms );
+    $(".HowMuch").html(resultPrice);
+    $(".HowLong").html(resultTerms);
 })
 
 //run stat
+let intermediateVariable = 1;
 const animItems = document.querySelectorAll('.chisl');
 
 if (animItems.length > 0) {
@@ -124,81 +125,89 @@ if (animItems.length > 0) {
 
                 //running numbers in block stat(start)
                 //run__OneNum
-                const timeOneNum = 1100; //ms
-                const stepOneNum = 1;
 
-                function runNumOne(num, elem) {
+                if (intermediateVariable == 1) {
+                    const timeOneNum = 1100; //ms
+                    const stepOneNum = 1;
 
-                    let l = document.querySelector('#' + elem);
-                    let n = 0;
-                    let t = Math.round(timeOneNum / (num / stepOneNum));
-                    let interval = setInterval(() => {
-                        n = n + stepOneNum;
-                        if (n == num) clearInterval(interval);
-                        l.innerHTML = n;
-                    }, t)
+                    function runNumOne(num, elem) {
+
+                        let l = document.querySelector('#' + elem);
+                        let n = 0;
+                        let t = Math.round(timeOneNum / (num / stepOneNum));
+                        let interval = setInterval(() => {
+                            n = n + stepOneNum;
+                            if (n == num) clearInterval(interval);
+                            l.innerHTML = n;
+                            console.log("run" + runNumOne);
+                        }, t);
+                    }
+
+                    runNumOne(120, 'outOneNum');
+
+
+                    //run__TwoNum
+                    const timeTwoNum = 1100; //ms
+                    const stepTwoNum = 40;
+
+                    function runNumTwo(num, elem) {
+
+                        let l = document.querySelector('#' + elem);
+                        let n = 0;
+                        let t = Math.round(timeTwoNum / (num / stepTwoNum));
+                        let interval = setInterval(() => {
+                            n = n + stepTwoNum;
+                            if (n == num) clearInterval(interval);
+                            l.innerHTML = n;
+                        }, t)
+                    }
+
+                    runNumTwo(4600, 'outTwoNum');
+
+                    //run__ThreeNum
+                    const timeThreeNum = 1100; //ms
+                    const stepThreeNum = 2;
+
+                    function runNumThree(num, elem) {
+
+                        let l = document.querySelector('#' + elem);
+                        let n = 0;
+                        let t = Math.round(timeThreeNum / (num / stepThreeNum));
+                        let interval = setInterval(() => {
+                            n = n + stepThreeNum;
+                            if (n == num) clearInterval(interval);
+                            l.innerHTML = n;
+                        }, t)
+                    }
+
+                    runNumThree(340, 'outThreeNum');
+
+                    //run__FourNum
+                    const timeFourNum = 1100; //ms
+                    const stepFourNum = 1;
+
+                    function runNumFour(num, elem) {
+
+                        let l = document.querySelector('#' + elem);
+                        let n = 0;
+                        let t = Math.round(timeFourNum / (num / stepFourNum));
+                        let interval = setInterval(() => {
+                            n = n + stepFourNum;
+                            if (n == num) clearInterval(interval);
+                            l.innerHTML = n;
+                        }, t)
+                    }
+                    runNumFour(23, 'outFourNum');
+
+
                 }
-
-                runNumOne(120, 'outOneNum');
-
-
-                //run__TwoNum
-                const timeTwoNum = 1100; //ms
-                const stepTwoNum = 40;
-
-                function runNumTwo(num, elem) {
-
-                    let l = document.querySelector('#' + elem);
-                    let n = 0;
-                    let t = Math.round(timeTwoNum / (num / stepTwoNum));
-                    let interval = setInterval(() => {
-                        n = n + stepTwoNum;
-                        if (n == num) clearInterval(interval);
-                        l.innerHTML = n;
-                    }, t)
-                }
-
-                runNumTwo(4600, 'outTwoNum');
-
-                //run__ThreeNum
-                const timeThreeNum = 1100; //ms
-                const stepThreeNum = 2;
-
-                function runNumThree(num, elem) {
-
-                    let l = document.querySelector('#' + elem);
-                    let n = 0;
-                    let t = Math.round(timeThreeNum / (num / stepThreeNum));
-                    let interval = setInterval(() => {
-                        n = n + stepThreeNum;
-                        if (n == num) clearInterval(interval);
-                        l.innerHTML = n;
-                    }, t)
-                }
-
-                runNumThree(340, 'outThreeNum');
-
-                //run__FourNum
-                const timeFourNum = 1100; //ms
-                const stepFourNum = 1;
-
-                function runNumFour(num, elem) {
-
-                    let l = document.querySelector('#' + elem);
-                    let n = 0;
-                    let t = Math.round(timeFourNum / (num / stepFourNum));
-                    let interval = setInterval(() => {
-                        n = n + stepFourNum;
-                        if (n == num) clearInterval(interval);
-                        l.innerHTML = n;
-                    }, t)
-                }
-                runNumFour(23, 'outFourNum');
-
+                intermediateVariable = 0;
             }
+
         }
     }
 }
+
 //running numbers in block stat(end^)
 function offset(el) {
     const rect = el.getBoundingClientRect(),
@@ -211,7 +220,6 @@ function offset(el) {
 }
 
 
-
 //anchor links
 //anchor links active or not active
 $(window).scroll(() => {
@@ -219,13 +227,13 @@ $(window).scroll(() => {
 
     $(".section").each((i, el) => {
         if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
-            $("nav .li").each((i, el) => {
-                if ($(el).hasClass("active")) {
-                    $(el).removeClass("active");
+            $("nav li").each((i, el) => {
+                if ($(el).hasClass("acti")) {
+                    $(el).removeClass("acti");
                 }
             });
 
-            $('nav li:eq(' + i + ')').find('.li').addClass('active');
+            $('nav li:eq (' + i + ')').find('li').addClass('acti');
         }
     });
 });
@@ -373,10 +381,16 @@ $('.leftSliderThree').click(function () {
 
 //Modal
 $(document).ready(function () {
-    $('.image-link').magnificPopup({
-        type: 'image'
-    });
+$('.image-link').magnificPopup({
+ fixedContentPos: false,
+removalDelay: 300,
+mainClass: 'mfp-width-zoom',
+    type: "image"
 });
+});
+
+
+
 
 setTimeout(function () {
     $('.invisib__button').trigger('click');
