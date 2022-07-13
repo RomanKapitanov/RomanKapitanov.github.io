@@ -1236,17 +1236,6 @@ margin-top: 40px;
 
 }
 
-[placeholder="Имя"]:focus {
-    border: 2px solid #00b6af;
-}
-
-[placeholder="Email"]:focus {
-    border: 2px solid #00b6af;
-}
-
-[placeholder="Сообщение"]:focus {
-    border: 2px solid #00b6af;
-}
 
 
 
