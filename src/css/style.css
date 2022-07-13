@@ -1236,19 +1236,19 @@ margin-top: 40px;
 
 }
 
-
-
-[placeholder="Имя"]:hover {
-    border: 2px solid #ea7700;
+[placeholder="Имя"]:focus {
+    border: 2px solid #00b6af;
 }
 
-[placeholder="Email"]:hover {
-    border: 2px solid #ea7700;
+[placeholder="Email"]:focus {
+    border: 2px solid #00b6af;
 }
 
-[placeholder="Сообщение"]:hover {
-    border: 2px solid #ea7700;
+[placeholder="Сообщение"]:focus {
+    border: 2px solid #00b6af;
 }
+
+
 
 .knopka input {
     border-radius: 5px;
