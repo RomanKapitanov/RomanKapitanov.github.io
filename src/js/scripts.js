@@ -139,7 +139,6 @@ if (animItems.length > 0) {
                             n = n + stepOneNum;
                             if (n == num) clearInterval(interval);
                             l.innerHTML = n;
-                            console.log("run" + runNumOne);
                         }, t);
                     }
 
@@ -226,14 +225,21 @@ $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
 
     $(".section").each((i, el) => {
+
         if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
+
             $("nav li").each((i, el) => {
-                if ($(el).hasClass("acti")) {
-                    $(el).removeClass("acti");
+
+                if ($('.spanActi').hasClass("acti")) {
+                    $('.spanActi').removeClass("acti");
+                }
+                if($('li').hasClass("acti")) {
+                    $('li').removeClass("acti");
                 }
             });
 
-            $('nav li:eq (' + i + ')').find('li').addClass('acti');
+            $('nav li:eq(' + i + ')').addClass('acti');
+            $('nav span:eq(' + i + ')').addClass('acti');
         }
     });
 });
@@ -380,16 +386,6 @@ $('.leftSliderThree').click(function () {
 
 
 //Modal
-$(document).ready(function () {
-$('.image-link').magnificPopup({
- fixedContentPos: false,
-removalDelay: 300,
-mainClass: 'mfp-width-zoom',
-    type: "image"
-});
-});
-
-
 
 
 setTimeout(function () {
