@@ -23,6 +23,14 @@ body::after {
     position: relative;
 }
 
+input, input:before, input:after {
+      -webkit-user-select: initial;
+      -khtml-user-select: initial;
+      -moz-user-select: initial;
+      -ms-user-select: initial;
+      user-select: initial;
+     }
+
 .cherta {
     -moz-user-select: -moz-none;
     -o-user-select: none;
@@ -1236,8 +1244,29 @@ margin-top: 40px;
 
 }
 
+[placeholder="Имя"]:focus {
+    border: 2px solid #00b6af;
+}
 
+[placeholder="Email"]:focus {
+    border: 2px solid #00b6af;
+}
 
+[placeholder="Сообщение"]:focus {
+    border: 2px solid #00b6af;
+}
+
+[placeholder="Имя"]:hover {
+    border: 2px solid #ea7700;
+}
+
+[placeholder="Email"]:hover {
+    border: 2px solid #ea7700;
+}
+
+[placeholder="Сообщение"]:hover {
+    border: 2px solid #ea7700;
+}
 
 .knopka input {
     border-radius: 5px;
