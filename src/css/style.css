@@ -23,7 +23,7 @@ body::after {
     position: relative;
 }
 
-input, input:before, input:after {
+input, input:before, input:after,  {
       -webkit-user-select: initial;
       -khtml-user-select: initial;
       -moz-user-select: initial;
@@ -43,6 +43,8 @@ input, input:before, input:after {
     transform: scale(1.1);
     color:#FFC000;
 }
+
+
 
 /*Loader*/
 
@@ -188,6 +190,10 @@ button {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+}
+
+li a{
+    color: #fff;
 }
 
 .li li:hover {
@@ -1209,11 +1215,7 @@ margin-top: 40px;
     height: 35px;
     background-color: rgba(206, 208, 212, 0.9);
     width: 352px;
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+
     box-sizing: border-box;
 }
 
@@ -1226,11 +1228,7 @@ margin-top: 40px;
 }
 
 .data [ name="q"] {
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+
     height: 95px;
     background-color: rgba(206, 208, 212, 0.9);
     text-indent: 6px;
